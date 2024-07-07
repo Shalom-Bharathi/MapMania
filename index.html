@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .header {
+            background: linear-gradient(to right,#00b09b,#96c93d);
+            padding:10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin:-10px;
+            font-family: "poppins";
+            color:white;
+            font-size: large;
+        }
+        .body-content {
+            background: linear-gradient(to right,#000000,#434343);
+            padding:10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-family: "poppins";
+            color:white;
+            width: 50%;
+            border-radius:20px;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border:2px solid black;
+            display: inline-flex;
+            margin: 20px;
+        }
+        .body-content1 {
+            background: linear-gradient(to right,#00b09b,#96c93d);
+            padding:10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-family: "poppins";
+            color:white;
+            width: 50%;
+            border-radius:20px;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border:2px solid black;
+            display: inline-flex;
+            margin: 20px;
+        }
+        img {
+            display: flex;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border:2px solid black;
+            transition: 2s;
+            
+        }
+
+        
+        button {
+            display: flex;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 10px;
+            background:linear-gradient(to right, #141E30, #243B55);
+            font-family: "poppins";
+            font-weight: 400;
+            border: none;
+            color:white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 20px;
+            
+            transition: 0.5s;
+            border:2px solid black;
+        }
+        .button_1 {
+            background:linear-gradient(to right, #4776E6, #8E54E9);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="header">
+        <center>
+        <h1>Map Mania</h1>
+    </center>
+        <h3>By Kavin Cyrus</h1>
+        
+        </div>
+        <br>
+        <br>
+        <br>
+        
+    <div class="body-content1">
+    
+    <img src="x.png" id="map" style="width: 300px;">
+    <center>
+    <button class="button_1" onclick="change1()">Add</button>
+    <button class="button_1" onclick="change2()">Remove</button>
+</center>
+    </div>
+
+    <div class="body-content">
+        <img src="CS.png" id="map" style="width: 300px;">
+        <center>
+        <button onclick="">Add</button>
+        <button onclick="">Remove</button>
+        </center>
+        </div>
+    
+        <div class="body-content">
+            <img src="CS.png" id="map" style="width: 300px;">
+            <center>
+            <button onclick="">Add</button>
+            <button onclick="">Remove</button>
+            </center>
+            </div>
+            <div class="body-content">
+                <img src="CS.png" id="map" style="width: 300px;">
+                <center>
+                <button onclick="">Add</button>
+                <button onclick="">Remove</button>
+                </center>
+                </div>
+
+                <div class="body-content">
+                    <img src="CS.png" id="map" style="width: 300px;">
+                    <center>
+                    <button onclick="">Add</button>
+                    <button onclick="">Remove</button>
+                    </center>
+                    </div>
+
+                    <div class="body-content">
+                        <img src="CS.png" id="map" style="width: 300px;">
+                        <center>
+                        <button onclick="">Add</button>
+                        <button onclick="">Remove</button>
+                        </center>
+                        </div>
+                    </center>
+    <script>
+        const map = document.getElementById("map")
+        
+        function change1() {
+            map.src = "y.png";
+        }
+        function change2() {
+            map.src = "x.png";
+        }
+    </script>
+</body>
+</html>
