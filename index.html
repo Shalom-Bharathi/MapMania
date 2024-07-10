@@ -72,13 +72,13 @@
             color:white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 20px;
-            
+            cursor: pointer;
             transition: 0.5s;
             border:2px solid black;
         }
         .button_1 {
             background:linear-gradient(to right, #4776E6, #8E54E9);
-            cursor: pointer;
+            
         }
     </style>
 </head>
@@ -96,62 +96,93 @@
         <br>
         
     <div class="body-content1">
-    
     <img src="x.png" id="map" style="width: 300px;">
     <center>
-    <button class="button_1" onclick="change1()">Add</button>
-    <button class="button_1" onclick="change2()">Remove</button>
+    <button class="button_1" onclick="change1('y',map)">Add terrain with Rivers map</button>
+    <button  onclick="change1('x',map)">Remove terrain with Rivers map</button>
 </center>
     </div>
 
-    <div class="body-content">
-        <img src="CS.png" id="map" style="width: 300px;">
+    <div class="body-content1">
+        <img src="a.png" id="map2" style="width: 300px;">
         <center>
-        <button onclick="">Add</button>
-        <button onclick="">Remove</button>
+        <button class="button_1" onclick="change1('b',map2) ">Add Climate Map</button>
+        <button onclick="change1('a',map2)">Remove Climate Map</button>
         </center>
         </div>
     
-        <div class="body-content">
-            <img src="CS.png" id="map" style="width: 300px;">
+        <div class="body-content1">
+            <img src="c.png" id="map3" style="width: 300px;">
             <center>
-            <button onclick="">Add</button>
-            <button onclick="">Remove</button>
+            <button class="button_1" onclick="change1('d',map3)">Add political map</button>
+            <button onclick="change1('c',map3)">Remove political map</button>
             </center>
             </div>
-            <div class="body-content">
-                <img src="CS.png" id="map" style="width: 300px;">
+            <div class="body-content1">
+                <img src="1.png" id="map4" style="width: 300px;">
                 <center>
-                <button onclick="">Add</button>
-                <button onclick="">Remove</button>
+                <button class="button_1" onclick="AddMauryan()">Add Mughal Empire (RED)</button>
+                <button onclick="RemoveMauryan()">Remove Mughal Empire (RED)</button>
+                <button  class="button_1" onclick="AddMughal()">Add Mauryan Empire (BLUE)</button>
+                <button onclick="RemoveMughal()">Remove Mauryan Empire (BLUE)</button>
                 </center>
                 </div>
 
-                <div class="body-content">
-                    <img src="CS.png" id="map" style="width: 300px;">
-                    <center>
-                    <button onclick="">Add</button>
-                    <button onclick="">Remove</button>
-                    </center>
-                    </div>
+                
 
-                    <div class="body-content">
-                        <img src="CS.png" id="map" style="width: 300px;">
-                        <center>
-                        <button onclick="">Add</button>
-                        <button onclick="">Remove</button>
-                        </center>
-                        </div>
-                    </center>
+                    
+            
     <script>
         const map = document.getElementById("map")
+        const map2 = document.getElementById("map2")
+        const map3 = document.getElementById("map3")
+        const map4 = document.getElementById("map4")
         
-        function change1() {
-            map.src = "y.png";
+        function change1(a, mapz) {
+
+            mapz.src = `${a}.png`
         }
-        function change2() {
-            map.src = "x.png";
-        }
+
+        function getFileName(src) {
+    return src.substring(src.lastIndexOf('/') + 1);
+}
+
+function AddMauryan() {
+    var fileName = getFileName(map4.src);
+    if (fileName == "1.png") {
+        map4.src = "2.png";
+    } else if (fileName == "3.png") {
+        map4.src = "4.png";
+    }
+}
+
+function RemoveMauryan() {
+    var fileName = getFileName(map4.src);
+    if (fileName == "2.png") {
+        map4.src = "1.png";
+    } else if (fileName == "4.png") {
+        map4.src = "3.png";
+    }
+}
+
+function AddMughal() {
+    var fileName = getFileName(map4.src);
+    if (fileName == "1.png") {
+        map4.src = "3.png";
+    } else if (fileName == "2.png") {
+        map4.src = "4.png";
+    }
+}
+
+function RemoveMughal() {
+    var fileName = getFileName(map4.src);
+    if (fileName == "3.png") {
+        map4.src = "1.png";
+    } else if (fileName == "4.png") {
+        map4.src = "2.png";
+    }
+}
+
     </script>
 </body>
 </html>
